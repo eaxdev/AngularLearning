@@ -1,0 +1,10 @@
+<div *ngIf="lesson">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" [(ngModel)]="lesson.name" />
+  </div>
+  <div>
+    <label for="completed">IsCompleted</label>
+    <input type="checkbox" [(ngModel)]="lesson.completed"/>
+  </div>
+</div>

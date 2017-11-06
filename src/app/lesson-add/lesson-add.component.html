@@ -1,0 +1,16 @@
+<h1>Add new lesson</h1>
+<form>
+  <p>ID: <input type="text" name="id" [(ngModel)]="newLesson.id"/></p>
+  <p>Name: <input type="text" name="name" [(ngModel)]="newLesson.name"/></p>
+  <p>IsCompleted: <input type="checkbox" name="IsCompleted" [(ngModel)]="newLesson.completed"/></p>
+  <p>
+    <button type="button"
+            class="btn btn-primary"
+            (click)="create(newLesson)">Save!
+    </button>
+    <button type="button"
+            class="btn btn-warning"
+            (click)="cancelNewLesson()">Cancel
+    </button>
+  </p>
+</form>
