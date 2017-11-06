@@ -1,9 +1,15 @@
-<button (click)="onCreate()">Create</button>
-<table>
-  <tr *ngFor="let lesson of lessons">
-    <td [class.completed]="lesson.completed">{{lesson.name}}</td>
-    <td>
-      <button (click)="onEdit(lesson)">Edit</button>
-      <button (click)="onDelete(lesson)">Delete</button></td>
-  </tr>
-</table>
+<div class="container">
+  <div class="col-md-12">
+    <h1>Lessons List</h1>
+    <button (click)="onCreate()" class="btn btn-success"><i class="fa fa-plus"></i></button>
+    <table class="table table-bordered table-striped table-hover">
+      <tr *ngFor="let lesson of lessons">
+        <td [class.completed]="lesson.completed">{{lesson.name}}</td>
+        <td>
+          <button (click)="onEdit(lesson)" class="btn btn-primary">Edit</button>
+          <button (click)="onDelete(lesson)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
